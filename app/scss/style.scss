@@ -27,21 +27,21 @@
 
     &-link {
       color: $title;
-      padding-bottom: 1px;
+      padding: 0 2px 1px;
       transition: color 0.3s;
-      @extend %quicksand-400;
+      @extend %roboto-400;
 
       &:hover {
         color: $accent;
         border-bottom: 1px solid $accent;
-        @extend %quicksand-500;
+        @extend %roboto-700;
       }
     }
 
     &-link--active {
       color: $accent;
       border-bottom: 1px solid $accent;
-      @extend %quicksand-500;
+      @extend %roboto-700;
     }
   }
 }
