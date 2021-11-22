@@ -632,6 +632,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
 
     span {
       font-size: 48px;
@@ -662,5 +663,120 @@
     align-items: center;
   }
 }
+
+
+.blog {
+  padding: 50px 0 160px;
+  background-image: url(../images/decor/blog-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      right: -20px;
+      top: -25px;
+      z-index: -1;
+      background-image: url(../images/decor/blog-decor.svg);
+      width: 126px;
+      height: 53px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__item {
+    max-width: 360px;
+    border: 1px solid #ececec;
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+      border: none;
+
+      .blog__item-link {
+        color: $accent;
+
+        &::after {
+          background-image: url(../images/icons/arrow.svg);
+        }
+      }
+    }
+  }
+
+  &__item-imglink {
+    display: block;
+
+    img {
+      height: 280px;
+      object-fit: cover;
+    }
+  }
+
+  &__item-box {
+    padding: 30px 40px;
+  }
+
+  &__item-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__item-author,
+  &__item-date {
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      left: 0;
+      top: 4px;
+    }
+  }
+
+  &__item-author::before {
+    background-image: url(../images/icons/user-gray.svg);
+  }
+
+  &__item-date::before {
+    background-image: url(../images/icons/time.svg);
+  }
+
+  &__item-title {
+    color: $title;
+    @extend %roboto-400;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  &__item-link {
+    position: relative;
+    transition: all 0.3s;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 8px;
+      background-image: url(../images/icons/arrow-gray.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 8px;
+      right: -14px;
+    }
+  }
+}
+
+
+
 
 @import 'media';
