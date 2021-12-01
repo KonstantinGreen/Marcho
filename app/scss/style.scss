@@ -152,6 +152,10 @@
     display: block;
   }
 
+  &__form {
+    display: flex;
+  }
+
   &__text {
     margin-bottom: 25px;
   }
@@ -163,6 +167,7 @@
     border: none;
     padding: 12px 10px 12px 15px;
     box-shadow: 0 7px 20px 0 rgba(192, 192, 192, 0.3);
+    margin-right: 3px;
 
 
     &::placeholder {
